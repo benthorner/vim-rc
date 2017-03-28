@@ -1,5 +1,6 @@
 set rtp+=~/.vim/bundle/Vundle.vim
 set backspace=indent,eol,start
+set nowrap
 
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
