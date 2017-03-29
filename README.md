@@ -27,13 +27,14 @@ Finally, open vim and run this...
 
 The following plugins are used.
 
-   - **NERDTree** to view directory tree
+   - **nerdtree** to view directory tree
    - **vim-airline** for a better prompt
    - **syntastic** for syntax checking
    - **ctrlp.vim** for finding files
    - **bufexplorer** to switch files
    - **molokai** for a better color scheme
    - **ack.vim** for grepping files
+   - **nerdcommenter** for toggling comments
 
 Key bindings help with the above.
 
