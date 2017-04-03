@@ -4,6 +4,7 @@ set directory=/tmp//
 set nowrap
 set hidden
 set nu
+set tabstop=2
 
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
