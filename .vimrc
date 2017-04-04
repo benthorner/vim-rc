@@ -29,3 +29,4 @@ set laststatus=2
 syntax enable
 silent! colorscheme molokai
 filetype plugin on
+filetype indent on
