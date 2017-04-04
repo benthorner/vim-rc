@@ -5,6 +5,7 @@ set nowrap
 set hidden
 set nu
 set tabstop=2
+set shiftwidth=2
 
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
