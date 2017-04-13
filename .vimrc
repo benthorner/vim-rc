@@ -21,6 +21,7 @@ call vundle#end()
 
 let mapleader = ","
 map <space>m :NERDTreeToggle<cr>
+map ,m :NERDTreeToggle<cr>
 map <space>f :CtrlP<cr>
 map <leader>. :BufExplorer<cr>
 map <leader><leader> :e#<cr>
