@@ -17,6 +17,7 @@ Plugin 'jlanzarotta/bufexplorer'
 Plugin 'tomasr/molokai'
 Plugin 'mileszs/ack.vim'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'modille/groovy.vim'
 call vundle#end()
 
 let mapleader = ","
