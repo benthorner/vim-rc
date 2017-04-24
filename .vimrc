@@ -9,6 +9,7 @@ set shiftwidth=2
 
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'tpope/vim-abolish'
 Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
 Plugin 'scrooloose/syntastic'
