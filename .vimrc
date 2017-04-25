@@ -19,6 +19,7 @@ Plugin 'tomasr/molokai'
 Plugin 'mileszs/ack.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'modille/groovy.vim'
+Plugin 'derekwyatt/vim-scala'
 call vundle#end()
 
 let mapleader = ","
