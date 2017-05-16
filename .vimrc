@@ -6,6 +6,7 @@ set hidden
 set nu
 set tabstop=2
 set shiftwidth=2
+set expandtab
 
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
