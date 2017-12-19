@@ -27,10 +27,11 @@ Finally, open vim and run this...
 
 The following plugins are used.
 
+   - **vim-abolish** for advance find/replace
    - **nerdtree** to view directory tree
    - **vim-airline** for a better prompt
-   - **syntastic** for syntax checking
    - **ctrlp.vim** for finding files
+   - **ale** for async syntax checking
    - **bufexplorer** to switch files
    - **molokai** for a better color scheme
    - **ack.vim** for grepping files

@@ -9,18 +9,15 @@ set shiftwidth=2
 set expandtab
 
 call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-abolish'
 Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
-Plugin 'scrooloose/syntastic'
 Plugin 'kien/ctrlp.vim'
+Plugin 'w0rp/ale'
 Plugin 'jlanzarotta/bufexplorer'
 Plugin 'tomasr/molokai'
 Plugin 'mileszs/ack.vim'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'modille/groovy.vim'
-Plugin 'derekwyatt/vim-scala'
 call vundle#end()
 
 let mapleader = ","
@@ -31,6 +28,7 @@ map <leader>. :BufExplorer<cr>
 map <leader><leader> :e#<cr>
 
 let NERDTreeQuitOnOpen=1
+let g:ale_lint_on_text_changed="never"
 set laststatus=2
 syntax enable
 silent! colorscheme molokai
