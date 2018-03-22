@@ -36,6 +36,7 @@ The following plugins are used.
    - **molokai** for a better color scheme
    - **ack.vim** for grepping files
    - **nerdcommenter** for toggling comments
+   - **vim-better-whitespace** for trailing whitespace
 
 Key bindings help with the above.
 

@@ -18,6 +18,7 @@ Plugin 'jlanzarotta/bufexplorer'
 Plugin 'tomasr/molokai'
 Plugin 'mileszs/ack.vim'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'ntpeters/vim-better-whitespace'
 call vundle#end()
 
 let mapleader = ","
@@ -29,6 +30,7 @@ map <leader><leader> :e#<cr>
 let NERDTreeQuitOnOpen=1
 let g:ale_lint_on_text_changed="never"
 set laststatus=2
+autocmd BufWrite * StripWhitespace
 
 syntax enable
 silent! colorscheme molokai
