@@ -39,7 +39,7 @@ The following plugins are used.
 
 Key bindings help with the above.
 
-   - `<space> m` toggles NERDTree
-   - `<space> f` opens ctrlp
+   - `<,> m` toggles NERDTree
+   - `<,> f` opens ctrlp
    - `<,> <.>` opens bufexplorer
    - `<,> <,>` switches to last file
