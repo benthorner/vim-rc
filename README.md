@@ -17,7 +17,7 @@ Run the following to get started.
 
 Then add the following to ''.vimrc''.
 
-    source $HOME/.vim-rc/.vimrc
+    source $HOME/.vim-rc/vimrc
 
 Finally, open vim and run this...
 
