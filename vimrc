@@ -7,6 +7,8 @@ set nu
 set tabstop=2
 set shiftwidth=2
 set expandtab
+set hlsearch
+set cursorline
 
 call vundle#begin()
 Plugin 'tpope/vim-abolish'
