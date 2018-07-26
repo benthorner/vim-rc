@@ -1,6 +1,7 @@
 set rtp+=~/.vim/bundle/Vundle.vim
 set backspace=indent,eol,start
 set directory=/tmp//
+set clipboard=unnamed
 set nowrap
 set hidden
 set nu
