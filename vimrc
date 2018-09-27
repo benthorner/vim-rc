@@ -10,16 +10,15 @@ set shiftwidth=2
 set expandtab
 set hlsearch
 set cursorline
+set re=1
 
 call vundle#begin()
 Plugin 'tpope/vim-abolish'
 Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
-Plugin 'kien/ctrlp.vim'
-Plugin 'w0rp/ale'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'jlanzarotta/bufexplorer'
 Plugin 'tomasr/molokai'
-Plugin 'mileszs/ack.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'ntpeters/vim-better-whitespace'
 call vundle#end()
@@ -31,7 +30,7 @@ map <leader>. :BufExplorer<cr>
 map <leader><leader> :e#<cr>
 
 let NERDTreeQuitOnOpen=1
-let g:ale_lint_on_text_changed="never"
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 set laststatus=2
 autocmd BufWrite * StripWhitespace
 

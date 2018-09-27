@@ -31,10 +31,8 @@ The following plugins are used.
    - **nerdtree** to view directory tree
    - **vim-airline** for a better prompt
    - **ctrlp.vim** for finding files
-   - **ale** for async syntax checking
    - **bufexplorer** to switch files
    - **molokai** for a better color scheme
-   - **ack.vim** for grepping files
    - **nerdcommenter** for toggling comments
    - **vim-better-whitespace** for trailing whitespace
 
