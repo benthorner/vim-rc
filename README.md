@@ -41,3 +41,4 @@ Key bindings help with the above.
    - `<,> f` opens ctrlp
    - `<,> <.>` opens bufexplorer
    - `<,> <,>` switches to last file
+   - `<,> c <space>` toggles comments for current line(s)
