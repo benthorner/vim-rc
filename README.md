@@ -7,7 +7,6 @@ A minimal config for Vim.
 You will need the following.
 
   - [Vundle](https://github.com/VundleVim/Vundle.vim) to manage plugins
-  - [Ack](https://beyondgrep.com/) (optional) to support ack.vim
 
 ## Install
 
