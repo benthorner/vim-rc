@@ -36,5 +36,6 @@ autocmd BufWrite * StripWhitespace
 
 syntax enable
 silent! colorscheme molokai
+hi Visual ctermbg=30 ctermfg=16
 filetype plugin on
 filetype indent on
