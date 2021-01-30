@@ -11,6 +11,7 @@ set expandtab
 set hlsearch
 set cursorline
 set re=1
+set mouse=n
 
 call vundle#begin()
 Plugin 'tpope/vim-abolish'
