@@ -29,7 +29,7 @@ The following plugins are used.
    - **vim-abolish** for advance find/replace
    - **nerdtree** to view directory tree
    - **vim-airline** for a better prompt
-   - **ctrlp.vim** for finding files
+   - **fzf.vim** for finding files and their contents
    - **bufexplorer** to switch files
    - **molokai** for a better color scheme
    - **nerdcommenter** for toggling comments
@@ -38,7 +38,9 @@ The following plugins are used.
 Key bindings help with the above.
 
    - `<,> m` toggles NERDTree
-   - `<,> f` opens ctrlp
+   - `<,> f` opens file finder
+   - `<,> fg` opens file finder (with `git ls-files`)
+   - `<,> g` opens file contents finder
    - `<,> <.>` opens bufexplorer
    - `<,> <,>` switches to last file
    - `<,> c <space>` toggles comments for current line(s)

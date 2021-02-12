@@ -18,7 +18,8 @@ call vundle#begin()
 Plugin 'tpope/vim-abolish'
 Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
-Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plugin 'junegunn/fzf.vim'
 Plugin 'jlanzarotta/bufexplorer'
 Plugin 'tomasr/molokai'
 Plugin 'scrooloose/nerdcommenter'
@@ -27,12 +28,13 @@ call vundle#end()
 
 let mapleader = ","
 map <leader>m :NERDTreeToggle<cr>
-map <leader>f :CtrlP<cr>
+map <leader>f :Files!<cr>
+map <leader>fg :GFiles!<cr>
+map <leader>g :Ag!<cr>
 map <leader>. :BufExplorer<cr>
 map <leader><leader> :e#<cr>
 
 let NERDTreeQuitOnOpen=1
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 set laststatus=2
 autocmd BufWrite * StripWhitespace
 
