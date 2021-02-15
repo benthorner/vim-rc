@@ -18,19 +18,35 @@ call vundle#begin()
 Plugin 'tpope/vim-abolish'
 Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
-Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plugin 'junegunn/fzf.vim'
+Plugin 'junegunn/fzf'
 Plugin 'jlanzarotta/bufexplorer'
 Plugin 'tomasr/molokai'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'ntpeters/vim-better-whitespace'
 call vundle#end()
 
+function! s:Test(line) abort
+  let file = split(a:line, ':')[0]
+  let line = split(a:line, ':')[1]
+  execute "e "."+".line." ".fnameescape(file)
+endfunction
+
+command! Ag call fzf#run({
+\  'source': 'ag .',
+\  'sink': function('s:Test'),
+\  'options': '--color=16 -d : --nth=3'
+\})
+
+command! Files call fzf#run({
+\  'source': 'git ls-files',
+\  'sink': 'e',
+\  'options': '--color=16'
+\})
+
 let mapleader = ","
 map <leader>m :NERDTreeToggle<cr>
-map <leader>f :Files!<cr>
-map <leader>fg :GFiles!<cr>
-map <leader>g :Ag!<cr>
+map <leader>f :Files<cr>
+map <leader>g :Ag<cr>
 map <leader>. :BufExplorer<cr>
 map <leader><leader> :e#<cr>
 
