@@ -34,13 +34,13 @@ endfunction
 command! Ag call fzf#run({
 \  'source': 'ag .',
 \  'sink': function('s:Test'),
-\  'options': '--color=16 -d : --nth=3'
+\  'options': '--color=16,fg:5 -d : --nth=3 --exact'
 \})
 
 command! Files call fzf#run({
-\  'source': 'git ls-files',
+\  'source': 'git ls-files | find .',
 \  'sink': 'e',
-\  'options': '--color=16'
+\  'options': '--color=16,fg:5'
 \})
 
 let mapleader = ","
