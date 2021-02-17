@@ -34,7 +34,7 @@ endfunction
 command! Ag call fzf#run({
 \  'source': 'ag .',
 \  'sink': function('s:Test'),
-\  'options': '--color=16,fg:5 -d : --nth=3 --exact'
+\  'options': '--color=16,fg:5 -d : --nth=3.. --exact'
 \})
 
 command! Files call fzf#run({
