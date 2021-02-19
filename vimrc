@@ -32,7 +32,7 @@ function! s:Test(line) abort
 endfunction
 
 command! Ag call fzf#run({
-\  'source': 'ag .',
+\  'source': 'ag -w .',
 \  'sink': function('s:Test'),
 \  'options': '--color=16,fg:5 -d : --nth=3.. --exact'
 \})
