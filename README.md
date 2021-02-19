@@ -7,6 +7,8 @@ A minimal config for Vim.
 You will need the following.
 
   - [Vundle](https://github.com/VundleVim/Vundle.vim) to manage plugins
+  - [fzf](https://github.com/junegunn/fzf#using-homebrew) (optional)
+  - [ag](https://github.com/ggreer/the_silver_searcher#installing) (optional)
 
 ## Install
 
@@ -39,8 +41,7 @@ Key bindings help with the above.
 
    - `<,> m` toggles NERDTree
    - `<,> f` opens file finder
-   - `<,> fg` opens file finder (with `git ls-files`)
    - `<,> g` opens file contents finder
    - `<,> <.>` opens bufexplorer
-   - `<,> <,>` switches to last file
+   - `<,> <,>` switches to previous file
    - `<,> c <space>` toggles comments for current line(s)
