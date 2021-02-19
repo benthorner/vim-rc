@@ -1,18 +1,33 @@
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" general
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let mapleader = ","
+
+filetype indent on               " auto indent by file type
+
+set backspace=indent,eol,start   " smart whitespace removal
+set directory=/tmp//             " hide away temp files
+set clipboard=unnamed            " use system clipboard
+set nowrap                       " don't wrap long lines
+set hidden                       " switch without saving
+set nu                           " show line numbers
+set tabstop=2                    " spaces on tab key press
+set shiftwidth=2                 " new line indent spaces
+set expandtab                    " convert tabs -> spaces
+set hlsearch                     " highlight all matches
+set cursorline                   " highlight current line
+set re=1                         " fast syntax highlight
+set mouse=n                      " enable mouse clicks
+set incsearch                    " incremental search
+set laststatus=2                 " always show airline
+
+" better highlighting for visual selection lines / text
+hi Visual ctermbg=30 ctermfg=16
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" packages
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set rtp+=~/.vim/bundle/Vundle.vim
-set backspace=indent,eol,start
-set directory=/tmp//
-set clipboard=unnamed
-set nowrap
-set hidden
-set nu
-set tabstop=2
-set shiftwidth=2
-set expandtab
-set hlsearch
-set cursorline
-set re=1
-set mouse=n
-set incsearch
 
 call vundle#begin()
 Plugin 'tpope/vim-abolish'
@@ -25,7 +40,10 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'ntpeters/vim-better-whitespace'
 call vundle#end()
 
-function! s:Test(line) abort
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" fzf (search)
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+function! s:OpenFileAtRow(line) abort
   let file = split(a:line, ':')[0]
   let line = split(a:line, ':')[1]
   execute "e "."+".line." ".fnameescape(file)
@@ -33,7 +51,7 @@ endfunction
 
 command! Ag call fzf#run({
 \  'source': 'ag -w .',
-\  'sink': function('s:Test'),
+\  'sink': function('s:OpenFileAtRow'),
 \  'options': '--color=16,fg:5 -d : --nth=3.. --exact'
 \})
 
@@ -43,19 +61,24 @@ command! Files call fzf#run({
 \  'options': '--color=16,fg:5'
 \})
 
-let mapleader = ","
-map <leader>m :NERDTreeToggle<cr>
 map <leader>f :Files<cr>
 map <leader>g :Ag<cr>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" NERDTree (file explorer)
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map <leader>m :NERDTreeToggle<cr>
+let NERDTreeQuitOnOpen=1
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" buffers
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <leader>. :BufExplorer<cr>
 map <leader><leader> :e#<cr>
-
-let NERDTreeQuitOnOpen=1
-set laststatus=2
 autocmd BufWrite * StripWhitespace
 
-syntax enable
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" syntax highlighting
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
 silent! colorscheme molokai
-hi Visual ctermbg=30 ctermfg=16
-filetype plugin on
-filetype indent on
+syntax enable
