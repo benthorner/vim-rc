@@ -4,6 +4,7 @@
 let mapleader = ","
 
 filetype indent on               " auto indent by file type
+filetype plugin on               " auto set options by type
 
 set backspace=indent,eol,start   " smart whitespace removal
 set directory=/tmp//             " hide away temp files
