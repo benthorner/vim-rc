@@ -53,7 +53,7 @@ endfunction
 command! Ag call fzf#run({
 \  'source': 'ag -w .',
 \  'sink': function('s:OpenFileAtRow'),
-\  'options': '--color=16,fg:5 -d : --nth=3.. --exact'
+\  'options': '--color=16,fg:5 --exact'
 \})
 
 command! Files call fzf#run({

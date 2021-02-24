@@ -41,7 +41,7 @@ Key bindings help with the above.
 
    - `<,> m` toggles NERDTree
    - `<,> f` opens file finder
-   - `<,> g` opens file contents finder
+   - `<,> g` opens file + contents finder
    - `<,> <.>` opens bufexplorer
    - `<,> <,>` switches to previous file
    - `<,> c <space>` toggles comments for current line(s)
