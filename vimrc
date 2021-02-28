@@ -25,6 +25,9 @@ set laststatus=2                 " always show airline
 " better highlighting for visual selection lines / text
 hi Visual ctermbg=30 ctermfg=16
 
+" copy current file path to clipbaord (e.g. for git blame)
+map ff :let @+ = expand("%")<cr>
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """ packages
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
