@@ -54,7 +54,7 @@ function! s:OpenFileAtRow(line) abort
 endfunction
 
 command! Ag call fzf#run({
-\  'source': 'ag -w .',
+\  'source': 'ag .',
 \  'sink': function('s:OpenFileAtRow'),
 \  'options': '--color=16,fg:5 --exact'
 \})
