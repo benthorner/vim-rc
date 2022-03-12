@@ -13,6 +13,7 @@ set nowrap                       " don't wrap long lines
 set hidden                       " switch without saving
 set nu                           " show line numbers
 set tabstop=2                    " spaces on tab key press
+set softtabstop=-1               " but convenient backspace
 set shiftwidth=2                 " new line indent spaces
 set expandtab                    " convert tabs -> spaces
 set hlsearch                     " highlight all matches
