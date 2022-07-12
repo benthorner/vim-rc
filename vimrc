@@ -63,7 +63,7 @@ command! Ag call fzf#run({
 \})
 
 command! Files call fzf#run({
-\  'source': 'git ls-files | find .',
+\  'source': 'git ls-files || find .',
 \  'sink': 'e',
 \  'options': '--color=16,fg:5'
 \})
