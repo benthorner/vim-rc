@@ -45,6 +45,8 @@ Plugin 'jlanzarotta/bufexplorer'
 Plugin 'tomasr/molokai'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-rhubarb'
 call vundle#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -76,6 +78,12 @@ map <leader>g :Ag<cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 map <leader>m :NERDTreeToggle<cr>
 let NERDTreeQuitOnOpen=1
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" fugitive (Git/Hub)
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map <leader>b :GBrowse<cr>
+let g:airline#extensions#branch#enabled = 0
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """ buffers

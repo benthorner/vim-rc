@@ -36,6 +36,7 @@ The following plugins are used.
    - **molokai** for a better color scheme
    - **nerdcommenter** for toggling comments
    - **vim-better-whitespace** for trailing whitespace
+   - **vim-fugitive** to browse Git/Hub
 
 Key bindings help with the above.
 
@@ -45,3 +46,4 @@ Key bindings help with the above.
    - `<,> <.>` opens bufexplorer
    - `<,> <,>` switches to previous file
    - `<,> c <space>` toggles comments for current line(s)
+   - `<,> b browses to the Git URL for the file / line(s)
