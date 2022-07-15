@@ -82,7 +82,7 @@ let NERDTreeQuitOnOpen=1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """ fugitive (Git/Hub)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
-map <leader>b :GBrowse<cr>
+map <leader>b :GBrowse master:%<cr>
 let g:airline#extensions#branch#enabled = 0
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
