@@ -37,6 +37,7 @@ The following plugins are used.
    - **nerdcommenter** for toggling comments
    - **vim-better-whitespace** for trailing whitespace
    - **vim-fugitive** to browse Git/Hub
+   - **grep** for listing relevant files to change
 
 Key bindings help with the above.
 
@@ -46,4 +47,6 @@ Key bindings help with the above.
    - `<,> <.>` opens bufexplorer
    - `<,> <,>` switches to previous file
    - `<,> c <space>` toggles comments for current line(s)
-   - `<,> b browses to the Git URL for the file / line(s)
+   - `<,> b` browses to the Git URL for the file / line(s)
+   - `<,> ww` toggles between viewports
+   - `<,> wq` closes the current buffer e.g. quickfix list

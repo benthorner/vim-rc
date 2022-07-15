@@ -47,6 +47,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rhubarb'
+Plugin 'yegappan/grep'
 call vundle#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -90,6 +91,7 @@ let g:airline#extensions#branch#enabled = 0
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 map <leader>. :BufExplorer<cr>
 map <leader><leader> :e#<cr>
+map <leader>wq :bd<cr>
 autocmd BufWrite * StripWhitespace
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -97,3 +99,8 @@ autocmd BufWrite * StripWhitespace
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 silent! colorscheme molokai
 syntax enable
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" viewports
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map <leader>ww <c-w><c-w>
