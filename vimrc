@@ -59,20 +59,20 @@ function! s:OpenFileAtRow(line) abort
   execute "e "."+".line." ".fnameescape(file)
 endfunction
 
-command! Ag call fzf#run({
+command! FzfAg call fzf#run({
 \  'source': 'ag .',
 \  'sink': function('s:OpenFileAtRow'),
 \  'options': '--color=16,fg:5 --exact'
 \})
 
-command! Files call fzf#run({
+command! FzfFiles call fzf#run({
 \  'source': 'git ls-files || find .',
 \  'sink': 'e',
 \  'options': '--color=16,fg:5'
 \})
 
-map <leader>f :Files<cr>
-map <leader>g :Ag<cr>
+map <leader>f :FzfFiles<cr>
+map <leader>g :FzfAg<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """ NERDTree (file explorer)
