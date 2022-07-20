@@ -87,7 +87,6 @@ let g:airline#extensions#branch#enabled = 0
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 map <leader>. :BufExplorer<cr>
 map <leader><leader> :e#<cr>
-map <leader>wq :bd<cr>
 autocmd BufWrite * StripWhitespace
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -103,4 +102,5 @@ hi QuickFixLine ctermbg=17
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """ viewports
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
-map <leader>ww <c-w><c-w>
+map ww <c-w><c-w>
+map we <c-w>j<c-w>q<cr>
