@@ -37,7 +37,6 @@ The following plugins are used.
    - **nerdcommenter** for toggling comments
    - **vim-better-whitespace** for trailing whitespace
    - **vim-fugitive** to browse Git/Hub
-   - **grep** for listing relevant files to change
 
 Key bindings help with the above.
 

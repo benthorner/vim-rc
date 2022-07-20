@@ -44,7 +44,6 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rhubarb'
-Plugin 'yegappan/grep'
 call vundle#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
