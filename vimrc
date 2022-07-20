@@ -25,9 +25,6 @@ set laststatus=2                 " always show airline
 set mmp=5000                     " https://github.com/vim/vim/issues/2049
 set scrolloff=10                 " scroll boundary margin
 
-" better highlighting for visual selection lines / text
-hi Visual ctermbg=30 ctermfg=16
-
 " copy current file path to clipbaord (e.g. for git blame)
 map ff :let @+ = expand("%")<cr>
 
@@ -99,6 +96,10 @@ autocmd BufWrite * StripWhitespace
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 silent! colorscheme molokai
 syntax enable
+
+hi CursorLine ctermbg=17
+hi Visual ctermbg=17
+hi QuickFixLine ctermbg=17
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """ viewports
