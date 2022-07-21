@@ -102,5 +102,5 @@ hi QuickFixLine ctermbg=17
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """ viewports
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
-map ww <c-w><c-w>
-map we <c-w>j<c-w>q<cr>
+map <leader>ww <c-w><c-w>
+map <leader>we <c-w>j<c-w>q<cr>
