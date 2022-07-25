@@ -73,8 +73,11 @@ map <leader>g :FzfAg<cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """ NERDTree (file explorer)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
+let NERDTreeQuitOnOpen = 1
+let NERDTreeWinSize = 60
+
 map <leader>m :NERDTreeToggle<cr>
-let NERDTreeQuitOnOpen=1
+map <leader>1m :NERDTreeFind<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """ fugitive (Git/Hub)
