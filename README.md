@@ -9,6 +9,7 @@ You will need the following.
   - [Vundle](https://github.com/VundleVim/Vundle.vim) to manage plugins
   - [fzf](https://github.com/junegunn/fzf#using-homebrew) (optional)
   - [ag](https://github.com/ggreer/the_silver_searcher#installing) (optional)
+  - [bat](https://github.com/sharkdp/bat) (optional)
 
 ## Install
 
@@ -31,7 +32,7 @@ The following plugins are used.
    - **vim-abolish** for advance find/replace
    - **nerdtree** to view directory tree
    - **vim-airline** for a better prompt
-   - **fzf.vim** for finding files and their contents
+   - **fzf[.vim]** for finding files and their contents
    - **bufexplorer** to switch files
    - **molokai** for a better color scheme
    - **nerdcommenter** for toggling comments
@@ -41,8 +42,8 @@ The following plugins are used.
 Key bindings help with the above.
 
    - `<,> m` toggles NERDTree
-   - `<,> f` opens file finder (Ctrl-P for history)
-   - `<,> g` opens file + contents finder (Ctrl-P for history)
+   - `<,> f` opens file finder
+   - `<,> g` opens file + contents finder
    - `<,> <.>` opens bufexplorer
    - `<,> <,>` switches to previous file
    - `<,> c <space>` toggles comments for current line(s)

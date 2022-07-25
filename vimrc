@@ -38,6 +38,7 @@ Plugin 'tpope/vim-abolish'
 Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
 Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
 Plugin 'jlanzarotta/bufexplorer'
 Plugin 'tomasr/molokai'
 Plugin 'scrooloose/nerdcommenter'
@@ -46,29 +47,41 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rhubarb'
 call vundle#end()
 
+"bat
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """ fzf (search)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
-function! s:OpenFileAtRow(line) abort
-  let file = split(a:line, ':')[0]
-  let line = split(a:line, ':')[1]
-  execute "e "."+".line." ".fnameescape(file)
+function! s:build_quickfix_list(lines)
+  call setqflist(map(copy(a:lines), '{ "filename": v:val }'))
+  copen
+  cc
 endfunction
 
-command! FzfAg call fzf#run({
-\  'source': 'ag .',
-\  'sink': function('s:OpenFileAtRow'),
-\  'options': '--color=16,fg:5 --exact --history /tmp/fzf-history'
-\})
+let g:fzf_preview_window = ['up:50%']
+let g:fzf_action = {'ctrl-q': function('s:build_quickfix_list')}
 
-command! FzfFiles call fzf#run({
-\  'source': 'git ls-files || find .',
-\  'sink': 'e',
-\  'options': '--color=16,fg:5 --history /tmp/fzf-history'
-\})
+let $FZF_DEFAULT_OPTS = '
+\  --bind ctrl-a:select-all
+\  --history /tmp/fzf-history
+\  --color=fg+:10,hl:2,hl+:10,bg+:234
+\'
 
-map <leader>f :FzfFiles<cr>
-map <leader>g :FzfAg<cr>
+command! -bang -nargs=* Ag call fzf#vim#ag(
+\  <q-args>,
+\  '--color-path "0;35"',
+\  fzf#vim#with_preview({'options': '--exact'}),
+\  <bang>0
+\)
+
+command! -bang -nargs=* Files call fzf#vim#files(
+\  <q-args>,
+\  fzf#vim#with_preview({'options': ['--exact', '--color=fg:5']}),
+\  <bang>0
+\)
+
+map <leader>f :Files!<cr>
+map <leader>g :Ag!<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """ NERDTree (file explorer)
