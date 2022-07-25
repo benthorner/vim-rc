@@ -58,13 +58,13 @@ endfunction
 command! FzfAg call fzf#run({
 \  'source': 'ag .',
 \  'sink': function('s:OpenFileAtRow'),
-\  'options': '--color=16,fg:5 --exact'
+\  'options': '--color=16,fg:5 --exact --history /tmp/fzf-history'
 \})
 
 command! FzfFiles call fzf#run({
 \  'source': 'git ls-files || find .',
 \  'sink': 'e',
-\  'options': '--color=16,fg:5'
+\  'options': '--color=16,fg:5 --history /tmp/fzf-history'
 \})
 
 map <leader>f :FzfFiles<cr>
