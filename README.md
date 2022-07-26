@@ -50,3 +50,4 @@ Key bindings help with the above.
    - `<,> b` browses to the Git URL for the file / line(s)
    - `<,> ww` toggles between viewports
    - `<,> wq` closes the current buffer e.g. quickfix list
+   - `<c-a><c-q>` dumps fzf results into quickfix list
