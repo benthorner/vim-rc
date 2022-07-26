@@ -74,7 +74,7 @@ command! -bang -nargs=* Ag call fzf#vim#ag(
 \  <bang>0
 \)
 
-command! -bang -nargs=* Files call fzf#vim#files(
+command! -bang -nargs=* Files call fzf#vim#gitfiles(
 \  <q-args>,
 \  fzf#vim#with_preview({'options': []}),
 \  <bang>0
