@@ -64,19 +64,19 @@ let g:fzf_action = {'ctrl-q': function('s:build_quickfix_list')}
 let $FZF_DEFAULT_OPTS = '
 \  --bind ctrl-a:select-all
 \  --history /tmp/fzf-history
-\  --color=fg+:10,hl:2,hl+:10,bg+:234
+\  --color=fg:5,fg+:5,hl:2,hl+:10,bg+:233
 \'
 
 command! -bang -nargs=* Ag call fzf#vim#ag(
 \  <q-args>,
 \  '--color-path "0;35"',
-\  fzf#vim#with_preview({'options': '--exact'}),
+\  fzf#vim#with_preview({'options': ['--exact']}),
 \  <bang>0
 \)
 
 command! -bang -nargs=* Files call fzf#vim#files(
 \  <q-args>,
-\  fzf#vim#with_preview({'options': ['--exact', '--color=fg:5']}),
+\  fzf#vim#with_preview({'options': []}),
 \  <bang>0
 \)
 
