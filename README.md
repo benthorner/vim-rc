@@ -7,9 +7,8 @@ A minimal config for Vim.
 You will need the following.
 
   - [Vundle](https://github.com/VundleVim/Vundle.vim) to manage plugins
-  - [fzf](https://github.com/junegunn/fzf#using-homebrew) (optional)
-  - [ag](https://github.com/ggreer/the_silver_searcher#installing) (optional)
-  - [bat](https://github.com/sharkdp/bat) (optional)
+  - [ripgrep](https://github.com/BurntSushi/ripgrep#installation) for fzf.vim
+  - [bat](https://github.com/sharkdp/bat) for fzf.vim (optional)
 
 ## Install
 
