@@ -67,9 +67,9 @@ let $FZF_DEFAULT_OPTS = '
 \  --color=fg:5,fg+:5,hl:2,hl+:10,bg+:233
 \'
 
-command! -bang -nargs=* Ag call fzf#vim#ag(
-\  <q-args>,
-\  '--color-path "0;35"',
+command! -bang -nargs=* Rg call fzf#vim#grep(
+\  "rg --line-number --no-heading --color=always -- ".shellescape(<q-args>),
+\  1,
 \  fzf#vim#with_preview({'options': ['--exact']}),
 \  <bang>0
 \)
@@ -81,7 +81,7 @@ command! -bang -nargs=* Files call fzf#vim#gitfiles(
 \)
 
 map <leader>f :Files!<cr>
-map <leader>g :Ag!<cr>
+map <leader>g :Rg!<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """ NERDTree (file explorer)
