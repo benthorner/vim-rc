@@ -74,13 +74,13 @@ command! -bang -nargs=* Rg call fzf#vim#grep(
 \  <bang>0
 \)
 
-command! -bang -nargs=* Files call fzf#vim#gitfiles(
-\  <q-args>,
+command! -bang -nargs=* GitFiles call fzf#vim#gitfiles(
+\  "",
 \  fzf#vim#with_preview({'options': []}),
 \  <bang>0
 \)
 
-map <leader>f :Files!<cr>
+map <leader>f :GitFiles!<cr>
 map <leader>g :Rg!<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
