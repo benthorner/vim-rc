@@ -64,11 +64,12 @@ let g:fzf_action = {'ctrl-q': function('s:build_quickfix_list')}
 let $FZF_DEFAULT_OPTS = '
 \  --bind ctrl-a:select-all
 \  --history /tmp/fzf-history
-\  --color=fg:5,fg+:5,hl:2,hl+:10,bg+:233
+\ --color=fg:21,hl:33
+\ --color=fg+:13,bg+:-1,hl+:39
 \'
 
 command! -bang -nargs=* Rg call fzf#vim#grep(
-\  "rg --line-number --no-heading --color=always -- ".shellescape(<q-args>),
+\  "rg --line-number --no-heading -- ".shellescape(<q-args>),
 \  1,
 \  fzf#vim#with_preview({'options': ['--exact']}),
 \  <bang>0
