@@ -8,6 +8,7 @@ You will need the following.
 
   - [Vundle](https://github.com/VundleVim/Vundle.vim) to manage plugins
   - [ripgrep](https://github.com/BurntSushi/ripgrep#installation) for fzf.vim
+  - ctags for Tagbar (install with e.g. Homebrew)
   - [bat](https://github.com/sharkdp/bat) for fzf.vim (optional)
 
 ## Install
@@ -37,6 +38,7 @@ The following plugins are used.
    - **nerdcommenter** for toggling comments
    - **vim-better-whitespace** for trailing whitespace
    - **vim-fugitive** to browse Git/Hub
+   - **tagbar** to browse ctags in a file on-the-fly
 
 Key bindings help with the above.
 
@@ -50,3 +52,4 @@ Key bindings help with the above.
    - `<,> ww` toggles between viewports
    - `<,> wq` closes the current buffer e.g. quickfix list
    - `<c-a><c-q>` dumps fzf results into quickfix list
+   - `<,> t` toggles tagbar

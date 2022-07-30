@@ -44,6 +44,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rhubarb'
+Plugin 'preservim/tagbar'
 call vundle#end()
 
 "bat
@@ -124,8 +125,21 @@ hi QuickFixLine ctermbg=17
 map <leader>ww <c-w><c-w>
 map <leader>we <c-w>j<c-w>q<cr>
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" Tagbar
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:tagbar_autofocus = 1
+let g:tagbar_autoclose = 1
+let g:tagbar_position = "topleft vertical"
+let g:tagbar_compact = 1
+let g:tagbar_foldlevel = 0
+let g:tagbar_width = 60
+let g:tagbar_sort = 0
+
+map <leader>t :TagbarToggle<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """ vim-airline
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:airline#extensions#branch#enabled = 0
+let g:airline#extensions#tagbar#enabled = 0
