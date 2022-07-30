@@ -99,9 +99,14 @@ map <leader>b :GBrowse master:%<cr>
 let g:airline#extensions#branch#enabled = 0
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
-""" buffers
+""" BufExplorer
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 map <leader>. :BufExplorer<cr>
+let g:bufExplorerShowRelativePath = 1
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" buffers
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <leader><leader> :e#<cr>
 autocmd BufWrite * StripWhitespace
 
