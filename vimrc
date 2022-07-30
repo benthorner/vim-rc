@@ -21,7 +21,6 @@ set cursorline                   " highlight current line
 set re=1                         " fast syntax highlight
 set mouse=n                      " enable mouse clicks
 set incsearch                    " incremental search
-set laststatus=2                 " always show airline
 set mmp=5000                     " https://github.com/vim/vim/issues/2049
 set scrolloff=10                 " scroll boundary margin
 
