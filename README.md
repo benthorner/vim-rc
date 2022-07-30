@@ -39,6 +39,7 @@ The following plugins are used.
    - **vim-better-whitespace** for trailing whitespace
    - **vim-fugitive** to browse Git/Hub
    - **tagbar** to browse ctags in a file on-the-fly
+   - **supertab** to reduce typing for Vim autocomplete
 
 Key bindings help with the above.
 

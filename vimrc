@@ -45,6 +45,7 @@ Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rhubarb'
 Plugin 'preservim/tagbar'
+Plugin 'ervandew/supertab'
 call vundle#end()
 
 "bat
