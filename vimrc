@@ -95,7 +95,6 @@ map <leader>m :NERDTreeToggle<cr>
 """ fugitive (Git/Hub)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 map <leader>b :GBrowse master:%<cr>
-let g:airline#extensions#branch#enabled = 0
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """ BufExplorer
@@ -124,3 +123,9 @@ hi QuickFixLine ctermbg=17
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 map <leader>ww <c-w><c-w>
 map <leader>we <c-w>j<c-w>q<cr>
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" vim-airline
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:airline#extensions#branch#enabled = 0
