@@ -78,7 +78,7 @@ command! -bang -nargs=* Rg call fzf#vim#grep(
 
 command! -bang -nargs=* GitFiles call fzf#vim#gitfiles(
 \  "",
-\  fzf#vim#with_preview({'options': []}),
+\  fzf#vim#with_preview({'options': ['--exact']}),
 \  <bang>0
 \)
 
