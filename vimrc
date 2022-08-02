@@ -132,11 +132,10 @@ map <leader>we <c-w>j<c-w>q<cr>
 let g:tagbar_autofocus = 1
 let g:tagbar_autoclose = 1
 let g:tagbar_position = "topleft vertical"
-let g:tagbar_compact = 1
 let g:tagbar_foldlevel = 0
 let g:tagbar_width = 60
 let g:tagbar_sort = 0
-let g:tagbar_map_showproto = ""
+let g:tagbar_map_showproto = ""  " overrides <space>
 
 map <leader>t :TagbarToggle<cr>
 
