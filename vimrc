@@ -25,7 +25,7 @@ set mmp=5000                     " https://github.com/vim/vim/issues/2049
 set scrolloff=10                 " scroll boundary margin
 
 " copy current file path to clipbaord (e.g. for git blame)
-map ff :let @+ = expand("%")<cr>
+noremap ff :let @+ = expand("%")<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """ packages
@@ -82,8 +82,8 @@ command! -bang -nargs=* GitFiles call fzf#vim#gitfiles(
 \  <bang>0
 \)
 
-map <leader>f :GitFiles!<cr>
-map <leader>g :Rg!<cr>
+noremap <leader>f :GitFiles!<cr>
+noremap <leader>g :Rg!<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """ NERDTree (file explorer)
@@ -91,24 +91,24 @@ map <leader>g :Rg!<cr>
 let NERDTreeQuitOnOpen = 1
 let NERDTreeWinSize = 60
 
-map <leader>m :NERDTreeToggle<cr>
-map <leader>l :NERDTreeFind<cr>
+noremap <leader>m :NERDTreeToggle<cr>
+noremap <leader>l :NERDTreeFind<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """ fugitive (Git/Hub)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
-map <leader>b :GBrowse master:%<cr>
+noremap <leader>b :GBrowse master:%<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """ BufExplorer
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
-map <leader>, :ToggleBufExplorer<cr>
+noremap <leader>, :ToggleBufExplorer<cr>
 let g:bufExplorerShowRelativePath = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """ buffers
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
-map <leader><leader> :e#<cr>
+noremap <leader><leader> :e#<cr>
 autocmd BufWrite * StripWhitespace
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -132,7 +132,7 @@ let g:tagbar_width = 60
 let g:tagbar_sort = 0
 let g:tagbar_map_showproto = ""  " overrides <space>
 
-map <leader>t :TagbarToggle<cr>
+noremap <leader>t :TagbarToggle<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """ vim-airline
