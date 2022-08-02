@@ -1,7 +1,7 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """ general
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
-let mapleader = ","
+let mapleader = " "
 
 filetype indent on               " auto indent by file type
 filetype plugin on               " auto set options by type
@@ -101,7 +101,7 @@ map <leader>b :GBrowse master:%<cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """ BufExplorer
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
-map <leader>. :ToggleBufExplorer<cr>
+map <leader>, :ToggleBufExplorer<cr>
 let g:bufExplorerShowRelativePath = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -136,6 +136,7 @@ let g:tagbar_compact = 1
 let g:tagbar_foldlevel = 0
 let g:tagbar_width = 60
 let g:tagbar_sort = 0
+let g:tagbar_map_showproto = ""
 
 map <leader>t :TagbarToggle<cr>
 
