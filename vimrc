@@ -92,6 +92,7 @@ let NERDTreeQuitOnOpen = 1
 let NERDTreeWinSize = 60
 
 map <leader>m :NERDTreeToggle<cr>
+map <leader>l :NERDTreeFind<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """ fugitive (Git/Hub)
