@@ -83,7 +83,7 @@ command! -bang -nargs=* GitFiles call fzf#vim#gitfiles(
 \)
 
 noremap <leader>f :GitFiles!<cr>
-noremap <leader>g :Rg!<cr>
+noremap ,fg :Rg!<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """ NERDTree (file explorer)
@@ -92,12 +92,12 @@ let NERDTreeQuitOnOpen = 1
 let NERDTreeWinSize = 60
 
 noremap <leader>m :NERDTreeToggle<cr>
-noremap <leader>l :NERDTreeFind<cr>
+noremap ,mf :NERDTreeFind<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """ fugitive (Git/Hub)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
-noremap <leader>b :GBrowse master:%<cr>
+noremap ,db :GBrowse master:%<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """ BufExplorer
