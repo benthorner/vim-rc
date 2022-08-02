@@ -101,7 +101,7 @@ map <leader>b :GBrowse master:%<cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """ BufExplorer
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
-map <leader>. :BufExplorer<cr>
+map <leader>. :ToggleBufExplorer<cr>
 let g:bufExplorerShowRelativePath = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
