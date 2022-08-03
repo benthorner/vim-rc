@@ -29,16 +29,14 @@ Finally, open vim and run this...
 
 See "plugins" in [vimrc](vimrc) for which plugins are used and why.
 
-Key bindings help with the above.
+As well as a few general key mappings (see "mappings" in [vimrc](vimrc)), many plugins also have additional or altered key mappings: see the relevant section for the plugin in [vimrc](vimrc).
 
-   - `<,> m` toggles NERDTree
-   - `<,> f` opens file finder
-   - `<,> g` opens file + contents finder
-   - `<,> <.>` opens bufexplorer
-   - `<,> <,>` switches to previous file
-   - `<,> c <space>` toggles comments for current line(s)
-   - `<,> b` browses to the Git URL for the file / line(s)
-   - `<,> ww` toggles between viewports
-   - `<,> wq` closes the current buffer e.g. quickfix list
-   - `<c-a><c-q>` dumps fzf results into quickfix list
-   - `<,> t` toggles tagbar
+### Key mappings
+
+Each key mapping defined in [vimrc](vimrc) follows the rules below:
+
+1. In the first instance, the mapping should be `<leader>` followed by a single key.
+
+2. If there are several related mappings, the "primary" mapping should follow the above rule; other mappings should be `,` followed by the "primary" mapping key, followed by another key.
+
+The first rule ensures common mappings are convenient. The second rule allows for extension, but without reducing the available keys to use with the first rule, or creating ambiguity that slows the "primary" mapping e.g. compare `<leader>f` ("primary") with `<leader>fg` (slows primary) vs `,fg` (primary still fast).
