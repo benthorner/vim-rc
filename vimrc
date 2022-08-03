@@ -1,7 +1,6 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """ general
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
-let mapleader = " "
 
 filetype indent on               " auto indent by file type
 filetype plugin on               " auto set options by type
@@ -24,8 +23,16 @@ set incsearch                    " incremental search
 set mmp=5000                     " https://github.com/vim/vim/issues/2049
 set scrolloff=10                 " scroll boundary margin
 
-" copy current file path to clipbaord (e.g. for git blame)
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" mappings
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let mapleader = " "
+
+" copy current file path to clipbaord (e.g. to run a test)
 noremap ff :let @+ = expand("%")<cr>
+
+" switch to the previous buffer (e.g. a file and its test)
+noremap <leader><leader> :e#<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """ plugins
@@ -49,7 +56,7 @@ Plugin 'ervandew/supertab'                " quick access to Vim autocomplete
 call vundle#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
-""" fzf (search)
+""" fzf[.vim]
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 function! s:build_quickfix_list(lines)
   call setqflist(map(copy(a:lines), '{ "filename": v:val }'))
@@ -84,7 +91,7 @@ noremap <leader>f :GitFiles!<cr>
 noremap ,fg :Rg!<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
-""" NERDTree (file explorer)
+""" nerdtree
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 let NERDTreeQuitOnOpen = 1
 let NERDTreeWinSize = 60
@@ -93,34 +100,34 @@ noremap <leader>m :NERDTreeToggle<cr>
 noremap ,mf :NERDTreeFind<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
-""" fugitive (Git/Hub)
+""" vim-fugitive/rhubarb
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 noremap <leader>b :GBrowse master:%<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
-""" BufExplorer
+""" bufexplorer
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 noremap <leader>, :ToggleBufExplorer<cr>
 let g:bufExplorerShowRelativePath = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
-""" buffers
+""" vim-better-whitespace
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
-noremap <leader><leader> :e#<cr>
 autocmd BufWrite * StripWhitespace
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
-""" syntax highlighting
+""" molokai
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 silent! colorscheme molokai
 syntax enable
 
+" overrides to make current line easier to see (blue)
 hi CursorLine ctermbg=17
 hi Visual ctermbg=17
 hi QuickFixLine ctermbg=17
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
-""" Tagbar
+""" tagbar
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:tagbar_autofocus = 1
 let g:tagbar_autoclose = 1
