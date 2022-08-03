@@ -29,7 +29,7 @@ set scrolloff=10                 " scroll boundary margin
 let mapleader = " "
 
 " copy current file path to clipbaord (e.g. to run a test)
-noremap ff :let @+ = expand("%")<cr>
+noremap <leader>p :let @+ = expand("%")<cr>
 
 " switch to the previous buffer (e.g. a file and its test)
 noremap <leader><leader> :e#<cr>
