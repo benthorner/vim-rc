@@ -27,19 +27,7 @@ Finally, open vim and run this...
 
 ## Features
 
-The following plugins are used.
-
-   - **vim-abolish** for advance find/replace
-   - **nerdtree** to view directory tree
-   - **vim-airline** for a better prompt
-   - **fzf[.vim]** for finding files and their contents
-   - **bufexplorer** to switch files
-   - **molokai** for a better color scheme
-   - **nerdcommenter** for toggling comments
-   - **vim-better-whitespace** for trailing whitespace
-   - **vim-fugitive** to browse Git/Hub
-   - **tagbar** to browse ctags in a file on-the-fly
-   - **supertab** to reduce typing for Vim autocomplete
+See "plugins" in [vimrc](vimrc) for which plugins are used and why.
 
 Key bindings help with the above.
 

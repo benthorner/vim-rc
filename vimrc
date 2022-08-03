@@ -28,24 +28,24 @@ set scrolloff=10                 " scroll boundary margin
 noremap ff :let @+ = expand("%")<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
-""" packages
+""" plugins
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
-Plugin 'tpope/vim-abolish'
-Plugin 'scrooloose/nerdtree'
-Plugin 'bling/vim-airline'
-Plugin 'junegunn/fzf'
-Plugin 'junegunn/fzf.vim'
-Plugin 'jlanzarotta/bufexplorer'
-Plugin 'tomasr/molokai'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'ntpeters/vim-better-whitespace'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-rhubarb'
-Plugin 'preservim/tagbar'
-Plugin 'ervandew/supertab'
+Plugin 'tpope/vim-abolish'                " advanced find/replace
+Plugin 'scrooloose/nerdtree'              " to view directory tree
+Plugin 'bling/vim-airline'                " better status / tab lines
+Plugin 'junegunn/fzf'                     " required for fzf.vim
+Plugin 'junegunn/fzf.vim'                 " finding files and their contents
+Plugin 'jlanzarotta/bufexplorer'          " to manage open buffers
+Plugin 'tomasr/molokai'                   " a better color scheme
+Plugin 'scrooloose/nerdcommenter'         " for toggling comments
+Plugin 'ntpeters/vim-better-whitespace'   " remove trailing whitespace
+Plugin 'tpope/vim-fugitive'               " required for vim-rhubarb
+Plugin 'tpope/vim-rhubarb'                " to browse Git/Hub for files
+Plugin 'preservim/tagbar'                 " to browse file ctags on-the-fly
+Plugin 'ervandew/supertab'                " quick access to Vim autocomplete
 call vundle#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
