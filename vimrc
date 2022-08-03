@@ -48,8 +48,6 @@ Plugin 'preservim/tagbar'
 Plugin 'ervandew/supertab'
 call vundle#end()
 
-"bat
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """ fzf (search)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
