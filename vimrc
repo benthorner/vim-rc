@@ -95,7 +95,7 @@ noremap ,mf :NERDTreeFind<cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """ fugitive (Git/Hub)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
-noremap ,db :GBrowse master:%<cr>
+noremap <leader>b :GBrowse master:%<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """ BufExplorer
