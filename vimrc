@@ -34,6 +34,10 @@ noremap <leader>p :let @+ = expand("%")<cr>
 " switch to the previous buffer (e.g. a file and its test)
 noremap <leader><leader> :e#<cr>
 
+" go back / forth between buffers (e.g. visible in tabline)
+noremap <leader>] :bn<cr>
+noremap <leader>[ :bp<cr>
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """ plugins
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -142,5 +146,13 @@ noremap <leader>t :TagbarToggle<cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """ vim-airline
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
+"avoid cluttering statusline with unnecessary info
 let g:airline#extensions#branch#enabled = 0
 let g:airline#extensions#tagbar#enabled = 0
+
+" make it easier to constantly track open buffers
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+
+" default is "|" which causes tabs to shuffle width
+let g:airline#extensions#tabline#left_alt_sep = ''
