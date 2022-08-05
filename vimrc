@@ -152,7 +152,7 @@ let g:airline#extensions#tagbar#enabled = 0
 
 " make it easier to constantly track open buffers
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:airline#extensions#tabline#formatter = 'short_path'
 
 " default is "|" which causes tabs to shuffle width
 let g:airline#extensions#tabline#left_alt_sep = ''
