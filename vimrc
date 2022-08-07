@@ -6,7 +6,7 @@ filetype indent on               " auto indent by file type
 filetype plugin on               " auto set options by type
 
 set backspace=indent,eol,start   " smart whitespace removal
-set directory=/tmp//             " hide away temp files
+set noswapfile                   " no multi-user edit check
 set clipboard=unnamed            " use system clipboard
 set nowrap                       " don't wrap long lines
 set hidden                       " switch without saving
