@@ -179,3 +179,10 @@ endfor
 
 noremap <leader>- <Plug>AirlineSelectPrevTab
 noremap <leader>= <Plug>AirlineSelectNextTab
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" nerdcommenter
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" add indentation within comments, not before them
+" works / avoids fighting with Python's black linter
+let NERDDefaultAlign = 'left'
