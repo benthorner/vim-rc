@@ -34,6 +34,9 @@ noremap <leader>p :let @+ = expand("%")<cr>
 " switch to the previous buffer (e.g. a file and its test)
 noremap <leader><leader> :e#<cr>
 
+" quickly prune individual buffers (outside of bufexplorer)
+noremap <leader><bs> :bd<cr>
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """ plugins
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -109,6 +112,9 @@ noremap <leader>b :GBrowse master:%<cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 noremap <leader>, :ToggleBufExplorer<cr>
 let g:bufExplorerShowRelativePath = 1
+
+" keep bufexplorer buffers in same order as tabline
+let g:bufExplorerSortBy = 'number'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """ vim-better-whitespace
