@@ -34,10 +34,6 @@ noremap <leader>p :let @+ = expand("%")<cr>
 " switch to the previous buffer (e.g. a file and its test)
 noremap <leader><leader> :e#<cr>
 
-" go back / forth between buffers (e.g. visible in tabline)
-noremap <leader>] :bn<cr>
-noremap <leader>[ :bp<cr>
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """ plugins
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -149,6 +145,7 @@ noremap <leader>t :TagbarToggle<cr>
 "avoid cluttering statusline with unnecessary info
 let g:airline#extensions#branch#enabled = 0
 let g:airline#extensions#tagbar#enabled = 0
+let g:airline#extensions#tabline#buffers_label = ''
 
 " make it easier to constantly track open buffers
 let g:airline#extensions#tabline#enabled = 1
@@ -156,3 +153,14 @@ let g:airline#extensions#tabline#formatter = 'short_path'
 
 " default is "|" which causes tabs to shuffle width
 let g:airline#extensions#tabline#left_alt_sep = ''
+
+" make it easier to navigate between far away tabs
+" mappings based on the plugin doc suggestions
+let g:airline#extensions#tabline#buffer_idx_mode = 1
+
+for i in range(0, 9)
+  execute 'noremap <leader>'.i '<Plug>AirlineSelectTab'.i
+endfor
+
+noremap <leader>- <Plug>AirlineSelectPrevTab
+noremap <leader>= <Plug>AirlineSelectNextTab
