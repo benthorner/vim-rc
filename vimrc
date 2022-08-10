@@ -150,16 +150,12 @@ noremap <leader>t :TagbarToggle<cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 " reduce clutter in statusline to file name / lines
 " format: A | B |   C   | X | Y | Z | warn/error
-let g:airline_section_b = ''       " hide git info
+let g:airline_extensions = []      " minimal opt-in
 let g:airline_section_x = ''       " hide file type
 let g:airline_section_y = ''       " hide encoding
 let g:airline_section_z = '%l/%L'  " just line nums
-let g:airline_section_warning = '' " hide '...'
-let g:airline_section_error = ''   " hide e.g. jedi
 
-" avoid cluttering statusline with unnecessary info
-let g:airline#extensions#branch#enabled = 0
-let g:airline#extensions#tagbar#enabled = 0
+"" avoid cluttering statusline with unnecessary info
 let g:airline#extensions#tabline#buffers_label = ''
 
 " make it easier to constantly track open buffers
