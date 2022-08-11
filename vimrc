@@ -34,6 +34,9 @@ noremap <leader>p :let @+ = expand("%")<cr>
 " quickly prune individual buffers (outside of bufexplorer)
 noremap <leader><bs> :bd<cr>
 
+" faster saves (and avoids :W typos, which is used by fzf)
+noremap <leader>s :w<cr>
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """ plugins
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
