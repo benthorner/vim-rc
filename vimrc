@@ -110,9 +110,6 @@ noremap <leader>b :GBrowse master:%<cr>
 noremap <leader>, :ToggleBufExplorer<cr>
 let g:bufExplorerShowRelativePath = 1
 
-" keep bufexplorer buffers in same order as tabline
-let g:bufExplorerSortBy = 'number'
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """ vim-better-whitespace
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
