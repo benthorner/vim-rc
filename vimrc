@@ -37,6 +37,9 @@ noremap <leader><bs> :bd<cr>
 " faster saves (and avoids :W typos, which is used by fzf)
 noremap <leader>s :w<cr>
 
+" make it easy to switch back to the  previously used buffer
+noremap <leader><leader> :e#<cr>
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """ plugins
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
