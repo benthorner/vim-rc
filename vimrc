@@ -58,7 +58,6 @@ Plugin 'ntpeters/vim-better-whitespace'   " remove trailing whitespace
 Plugin 'tpope/vim-fugitive'               " required for vim-rhubarb
 Plugin 'tpope/vim-rhubarb'                " to browse Git/Hub for files
 Plugin 'preservim/tagbar'                 " to browse file ctags on-the-fly
-Plugin 'ervandew/supertab'                " quick access to Vim autocomplete
 call vundle#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
