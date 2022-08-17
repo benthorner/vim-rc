@@ -86,13 +86,15 @@ command! -bang -nargs=* Rg call fzf#vim#grep(
 \  <bang>0
 \)
 
-command! -bang -nargs=* GitFiles call fzf#vim#gitfiles(
-\  "--cached --others --exclude-standard",
-\  fzf#vim#with_preview({'options': ['--exact']}),
-\  <bang>0
+command! -bang -nargs=* Files call fzf#run(
+\  fzf#vim#with_preview({
+\    "source": "git ls-files --cached --others --exclude-standard || find . -type f",
+\    "sink": "e",
+\    "options": ["--exact"],
+\  })
 \)
 
-noremap <leader>f :GitFiles!<cr>
+noremap <leader>f :Files!<cr>
 noremap ,fg :Rg!<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
