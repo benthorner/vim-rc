@@ -11,6 +11,23 @@ You will need the following.
   - ctags for Tagbar (install with e.g. Homebrew)
   - [bat](https://github.com/sharkdp/bat) for fzf.vim (optional)
 
+### coc.nvim
+
+This requires a manual build if `yarn` is not installed:
+
+    cd ~/.vim/bundle/coc.nvim
+    npx exec yarn install
+
+Use the following config:
+
+    echo '
+    {
+      "suggest.snippetsSupport": false,
+      "suggest.maxCompleteItemCount": 10,
+      "diagnostic.enable": false
+    }
+    ' > ~/.vim/coc-settings.json
+
 ## Install
 
 Run the following to get started.

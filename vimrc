@@ -46,18 +46,19 @@ noremap <leader><leader> :e#<cr>
 set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
-Plugin 'tpope/vim-abolish'                " advanced find/replace
-Plugin 'scrooloose/nerdtree'              " to view directory tree
-Plugin 'bling/vim-airline'                " better status / tab lines
-Plugin 'junegunn/fzf'                     " required for fzf.vim
-Plugin 'junegunn/fzf.vim'                 " finding files and their contents
-Plugin 'jlanzarotta/bufexplorer'          " to manage open buffers
-Plugin 'tomasr/molokai'                   " a better color scheme
-Plugin 'scrooloose/nerdcommenter'         " for toggling comments
-Plugin 'ntpeters/vim-better-whitespace'   " remove trailing whitespace
-Plugin 'tpope/vim-fugitive'               " required for vim-rhubarb
-Plugin 'tpope/vim-rhubarb'                " to browse Git/Hub for files
-Plugin 'preservim/tagbar'                 " to browse file ctags on-the-fly
+Plugin 'tpope/vim-abolish'                          " advanced find/replace
+Plugin 'scrooloose/nerdtree'                        " to view directory tree
+Plugin 'bling/vim-airline'                          " better status / tab lines
+Plugin 'junegunn/fzf'                               " required for fzf.vim
+Plugin 'junegunn/fzf.vim'                           " finding files and their contents
+Plugin 'jlanzarotta/bufexplorer'                    " to manage open buffers
+Plugin 'tomasr/molokai'                             " a better color scheme
+Plugin 'scrooloose/nerdcommenter'                   " for toggling comments
+Plugin 'ntpeters/vim-better-whitespace'             " remove trailing whitespace
+Plugin 'tpope/vim-fugitive'                         " required for vim-rhubarb
+Plugin 'tpope/vim-rhubarb'                          " to browse Git/Hub for files
+Plugin 'preservim/tagbar'                           " to browse file ctags on-the-fly
+Plugin 'neoclide/coc.nvim', {'branch': 'release'}   " general autocomplete popup
 call vundle#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -162,3 +163,19 @@ let g:airline_section_z = '%l/%L'  " just line nums
 " add indentation within comments, not before them
 " works / avoids fighting with Python's black linter
 let NERDDefaultAlign = 'left'
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" coc.nvim
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" use <cr> to confirm selections (tab is confusing)
+inoremap <silent><expr> <CR>
+\   coc#pum#visible()
+\   ? coc#pum#confirm()
+\   : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+" disable basic word completion for current (around)
+" and other buffers - often irrelevant e.g. comments
+autocmd Filetype * let b:coc_disabled_sources = [
+\   'around',
+\   'buffer',
+\]
