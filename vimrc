@@ -103,6 +103,7 @@ noremap ,fg :Rg!<cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 let NERDTreeQuitOnOpen = 1
 let NERDTreeWinSize = 60
+let g:NERDTreeMinimalMenu = 1
 
 noremap <leader>m :NERDTreeToggle<cr>
 noremap ,mf :NERDTreeFind<cr>
