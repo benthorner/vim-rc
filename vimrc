@@ -132,8 +132,8 @@ syntax enable
 
 " overrides to make current line easier to see (blue)
 hi CursorLine ctermbg=17
-hi Visual ctermbg=17
-hi QuickFixLine ctermbg=17
+hi Visual ctermbg=18
+hi QuickFixLine ctermbg=18
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """ tagbar
