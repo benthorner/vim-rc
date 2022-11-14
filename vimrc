@@ -39,6 +39,9 @@ noremap <leader>s :w<cr>
 
 " make it easy to switch back to the  previously used buffer
 noremap <leader><leader> :e#<cr>
+"
+" avoid overwriting clipboard when visually pasting
+noremap p pgvy
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """ plugins
