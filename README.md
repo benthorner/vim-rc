@@ -16,7 +16,7 @@ You will need the following.
 This requires a manual build if `yarn` is not installed:
 
     cd ~/.vim/bundle/coc.nvim
-    npx exec yarn install
+    yarn install
 
 Use the following config:
 
