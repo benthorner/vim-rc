@@ -74,10 +74,10 @@ let g:fzf_preview_window = ['up:50%']
 let g:fzf_action = {'ctrl-q': function('s:build_quickfix_list')}
 
 let $FZF_DEFAULT_OPTS = '
-\  --bind ctrl-a:select-all
+\  --bind ctrl-w:select-all
 \  --history /tmp/fzf-history
-\ --color=fg:21,hl:33
-\ --color=fg+:13,bg+:-1,hl+:39
+\  --color=fg:21,hl:33
+\  --color=fg+:13,bg+:-1,hl+:39
 \'
 
 command! -bang -nargs=* Rg call fzf#vim#grep(
