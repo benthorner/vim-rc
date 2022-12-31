@@ -24,6 +24,8 @@ Use the following config:
     {
       "suggest.snippetsSupport": false,  // less completion clutter
       "suggest.maxCompleteItemCount": 10,  // smaller completion
+      "diagnostic.enable": false,  // disable syntax error popups
+      "suggest.enableFloat": false,  // disable docs in completion
     }
     ' > ~/.vim/coc-settings.json
 
