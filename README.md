@@ -22,9 +22,8 @@ Use the following config:
 
     echo '
     {
-      "suggest.snippetsSupport": false,
-      "suggest.maxCompleteItemCount": 10,
-      "diagnostic.enable": false
+      "suggest.snippetsSupport": false,  // less completion clutter
+      "suggest.maxCompleteItemCount": 10,  // smaller completion
     }
     ' > ~/.vim/coc-settings.json
 
