@@ -81,7 +81,7 @@ let $FZF_DEFAULT_OPTS = '
 \'
 
 command! -bang -nargs=* Rg call fzf#vim#grep(
-\  "rg --line-number --no-heading -- ''",
+\  "rg --line-number --no-heading --color=always -- ''",
 \  1,
 \  fzf#vim#with_preview({'options': ['--exact', '-q', <q-args>]}),
 \  <bang>0
