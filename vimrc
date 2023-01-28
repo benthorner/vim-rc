@@ -80,14 +80,14 @@ let $FZF_DEFAULT_OPTS = '
 \  --color=fg+:13,bg+:-1,hl+:39
 \'
 
-command! -bang -nargs=* Rg call fzf#vim#grep(
+command! -bang -nargs=* FzfGrep call fzf#vim#grep(
 \  "rg --line-number --no-heading --color=always -- ''",
 \  1,
 \  fzf#vim#with_preview({'options': ['--exact', '-q', <q-args>]}),
 \  <bang>0
 \)
 
-command! -bang -nargs=* Files call fzf#run(
+command! -bang -nargs=* FzfFiles call fzf#run(
 \  fzf#wrap(
 \    fzf#vim#with_preview({
 \      "source": "git ls-files --cached --others --exclude-standard || find . -type f",
@@ -97,8 +97,8 @@ command! -bang -nargs=* Files call fzf#run(
 \  )
 \)
 
-noremap <leader>f :Files!<cr>
-noremap ,fg :Rg!<cr>
+noremap <leader>f :FzfFiles!<cr>
+noremap ,fg :FzfGrep!<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """ nerdtree
