@@ -83,7 +83,7 @@ let $FZF_DEFAULT_OPTS = '
 command! -bang -nargs=* FzfGrep call fzf#vim#grep(
 \  "rg --line-number --no-heading --color=always -- ''",
 \  1,
-\  fzf#vim#with_preview({'options': ['--exact', '-q', <q-args>]}),
+\  fzf#vim#with_preview({'options': ['--exact', <f-args>]}),
 \  <bang>0
 \)
 
