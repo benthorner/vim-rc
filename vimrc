@@ -99,6 +99,7 @@ command! -bang -nargs=* FzfFiles call fzf#run(
 
 noremap <leader>f :FzfFiles!<cr>
 noremap ,fg :FzfGrep!<cr>
+noremap ,fc :FzfGrep! --nth=3<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """ nerdtree
