@@ -97,9 +97,18 @@ command! -bang -nargs=* FzfFiles call fzf#run(
 \  )
 \)
 
+command! -bang -nargs=* FzfRgCword call fzf#vim#grep(
+\   "rg --line-number --no-heading --color=always -- " . shellescape(expand('<cword>')),
+\   1,
+\   fzf#vim#with_preview({'options': ['--exact', '-q', <q-args>]}),
+\   1
+\ )
+
+
 noremap <leader>f :FzfFiles!<cr>
 noremap ,fg :FzfGrep!<cr>
 noremap ,fc :FzfGrep! --nth=3<CR>
+noremap ,fw :FzfRgCword!<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """ nerdtree
