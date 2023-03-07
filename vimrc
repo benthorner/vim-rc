@@ -192,3 +192,9 @@ autocmd Filetype * let b:coc_disabled_sources = [
 \   'around',
 \   'buffer',
 \]
+
+" use purples (13) and blues (39, 33) for suggestions
+" on top of a grey background (234, 235)
+hi CocMenuSel ctermfg=13 ctermbg=235
+hi CocSearch ctermfg=39
+hi CocFloating ctermfg=33 ctermbg=234
