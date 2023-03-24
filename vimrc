@@ -39,6 +39,9 @@ noremap <leader>s :w<cr>
 
 " make it easy to switch back to the  previously used buffer
 noremap <leader><leader> :e#<cr>
+"
+" Make editing commands more intuitive (like in term)
+cnoremap <c-a> <home>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """ plugins
