@@ -62,6 +62,7 @@ Plugin 'tpope/vim-fugitive'                         " required for vim-rhubarb
 Plugin 'tpope/vim-rhubarb'                          " to browse Git/Hub for files
 Plugin 'preservim/tagbar'                           " to browse file ctags on-the-fly
 Plugin 'neoclide/coc.nvim', {'branch': 'release'}   " general autocomplete popup
+Plugin 'SirVer/ultisnips'                           " to insert common snippets
 call vundle#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -201,3 +202,8 @@ autocmd Filetype * let b:coc_disabled_sources = [
 hi CocMenuSel ctermfg=13 ctermbg=235
 hi CocSearch ctermfg=39
 hi CocFloating ctermfg=33 ctermbg=234
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" ultisnips
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:UltiSnipsSnippetDirectories=[$HOME."/.snippets"]
