@@ -45,6 +45,15 @@ cnoremap <c-a> <home>
 
 " Avoid overwriting paste buffer with previous content
 xnoremap <silent> p p:let @+=@0<CR>
+"
+" Make it easy to move single lines to the start of a file.
+"
+" Note: when we set the return mark we immediately use it to
+" ensure the subsequent "m[ove]" moves the current line - if
+" the cursor is at the end of the line it actually moves the
+" next line, if this "return" technique is not used.
+noremap <silent> <leader>1 m1 '1 :lockmarks m 0<CR> '1
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """ plugins
