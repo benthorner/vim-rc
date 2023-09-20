@@ -30,7 +30,7 @@ let mapleader = " "
 
 " copy current file path to clipbaord (e.g. to run a test)
 noremap <leader>p :let @+ = expand("%")<cr>
-
+"
 " quickly prune individual buffers (outside of bufexplorer)
 noremap <leader><bs> :bd<cr>
 
@@ -39,9 +39,12 @@ noremap <leader>s :w<cr>
 
 " make it easy to switch back to the  previously used buffer
 noremap <leader><leader> :e#<cr>
-"
+
 " Make editing commands more intuitive (like in term)
 cnoremap <c-a> <home>
+
+" Avoid overwriting paste buffer with previous content
+xnoremap <silent> p p:let @+=@0<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """ plugins
