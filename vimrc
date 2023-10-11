@@ -237,3 +237,26 @@ let g:tagbar_type_python = {
         \ '?:unknown',
     \ ],
 \ }
+
+Plugin 'davidhalter/jedi-vim'
+let g:jedi#goto_assignments_command = ""  " release <c-g>
+let g:jedi#goto_stubs_command = ""  " release <c-s>
+let g:jedi#use_tag_stack = 1  " <c-t> to go back to usages
+let g:jedi#popup_on_dot = 0  " disable in favour of coc
+
+" install coc-jedi for coc.nvim autocompletion support
+"
+" {
+"   "jedi.completion.disableSnippets": true
+" }
+
+Plugin 'w0rp/ale'
+let g:ale_linters_explicit = 1  " must specify linters
+let g:ale_lint_on_text_changed = 'never'  " only on save
+let g:ale_fix_on_save = 1
+let g:ale_virtualtext_cursor = 'disabled'  " hint comments
+
+Plugin 'ranelpadon/python-copy-reference.vim'
+nnoremap <leader>e :PythonCopyReferencePytest<CR>
+nnoremap ,ed :PythonCopyReferenceDotted<CR>
+nnoremap ,er :PythonCopyReferenceImport<CR>
