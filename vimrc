@@ -174,6 +174,18 @@ let g:tagbar_width = 60
 let g:tagbar_sort = 0
 let g:tagbar_map_showproto = ""  " overrides <space>
 
+" Don't show imports as they get auto expanded
+" if viewing tags after opening a file.
+let g:tagbar_type_python = {
+    \ 'kinds' : [
+        \ 'c:classes',
+        \ 'f:functions',
+        \ 'm:members',
+        \ 'v:variables',
+        \ '?:unknown',
+    \ ],
+\ }
+
 noremap <leader>t :TagbarToggle<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
