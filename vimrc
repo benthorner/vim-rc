@@ -37,7 +37,7 @@ noremap <leader><bs> :bd<cr>
 " faster saves (and avoids :W typos, which is used by fzf)
 noremap <leader>s :w<cr>
 
-" make it easy to switch back to the  previously used buffer
+" make it easy to switch back to the previously used buffer
 noremap <leader><leader> :e#<cr>
 
 " Make editing commands more intuitive (like in term)
@@ -75,6 +75,7 @@ Plugin 'tpope/vim-rhubarb'                          " to browse Git/Hub for file
 Plugin 'preservim/tagbar'                           " to browse file ctags on-the-fly
 Plugin 'neoclide/coc.nvim', {'branch': 'release'}   " general autocomplete popup
 Plugin 'SirVer/ultisnips'                           " to insert common snippets
+Plugin 'embear/vim-localvimrc'                      " per-project configuration
 call vundle#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -219,6 +220,14 @@ hi CocFloating ctermfg=33 ctermbg=234
 """ ultisnips
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:UltiSnipsSnippetDirectories=[$HOME."/.snippets"]
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" localvimrc
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Allow running vimrc scripts natively when confirmed
+" and store this decision per-project.
+let g:localvimrc_sandbox = 0
+let g:localvimrc_persistent = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
