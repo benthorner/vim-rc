@@ -54,6 +54,12 @@ xnoremap <silent> p p:let @+=@0<CR>
 " next line, if this "return" technique is not used.
 noremap <silent> <leader>1 m1 '1 :lockmarks m 0<CR> '1
 
+" Make it easy to search for a visual selection / line
+" https://vim.fandom.com/wiki/Search_for_visually_selected_text
+vnoremap <silent> * :<C-U>
+  \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
+  \gvy/<C-R>=&ic?'\c':'\C'<CR><C-R><C-R>=substitute(
+  \escape(@", '/\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """ plugins
