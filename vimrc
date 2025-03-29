@@ -151,8 +151,13 @@ noremap <leader>b :GBrowse master:%<cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """ bufexplorer
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
-noremap <leader>, :ToggleBufExplorer<cr>
+noremap <leader>, :ToggleBufExplorer vsplit<cr>
 let g:bufExplorerShowRelativePath = 1
+let g:bufExplorerSplitVertSize = 60
+
+" open in original window on <Enter> (vsplit is closed)
+autocmd User BufExplorer_Started
+  \ nmap <buffer> <Enter> <Plug>(BufExplorer_OpenBufferOriginalWindow)
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """ vim-better-whitespace
