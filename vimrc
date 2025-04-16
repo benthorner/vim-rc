@@ -154,6 +154,7 @@ noremap <leader>b :GBrowse master:%<cr>
 noremap <leader>, :ToggleBufExplorer<cr>
 let g:bufExplorerShowRelativePath = 1
 let g:bufExplorerDefaultHelp = 0
+let g:bufExplorerColumns = ['number', 'splittablepath']
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """ vim-better-whitespace
