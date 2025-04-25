@@ -11,24 +11,6 @@ You will need the following.
   - ctags for Tagbar (install with e.g. Homebrew)
   - [bat](https://github.com/sharkdp/bat) for fzf.vim (optional)
 
-### coc.nvim
-
-This requires a manual build if `yarn` is not installed:
-
-    cd ~/.vim/bundle/coc.nvim
-    yarn install
-
-Use the following config:
-
-    echo '
-    {
-      "suggest.snippetsSupport": false,  // less completion clutter
-      "suggest.maxCompleteItemCount": 10,  // smaller completion
-      "diagnostic.enable": false,  // disable syntax error popups
-      "suggest.enableFloat": false,  // disable docs in completion
-    }
-    ' > ~/.vim/coc-settings.json
-
 ## Install
 
 Run the following to get started.
@@ -42,6 +24,36 @@ Then add the following to ''.vimrc''.
 Finally, open vim and run this...
 
     :PluginInstall
+
+### coc.nvim
+
+This may require a manual build:
+
+    (cd ~/.vim/bundle/coc.nvim && npm ci)
+
+Use the following config:
+
+    echo '
+    {
+      "suggest.snippetsSupport": false,  // less completion clutter
+      "suggest.maxCompleteItemCount": 10,  // smaller completion
+      "diagnostic.enable": false,  // disable syntax error popups
+      "suggest.enableFloat": false,  // disable docs in completion
+    }
+    ' > ~/.vim/coc-settings.json
+
+Finally, install any extensions:
+
+    :CocInstall coc-jedi
+
+### ultisnips
+
+Add any existing snippets in `~/.snippets`.
+
+Extend to other directories like this:
+
+    let g:UltiSnipsSnippetDirectories = g:UltiSnipsSnippetDirectories +
+    \  [$HOME.'/somewhere/else']
 
 ## Features
 
