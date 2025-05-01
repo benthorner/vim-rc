@@ -31,7 +31,7 @@ This may require a manual build:
 
     (cd ~/.vim/bundle/coc.nvim && npm ci)
 
-Use the following config:
+Adjust the settings e.g.
 
     echo '
     {
