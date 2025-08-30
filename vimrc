@@ -266,7 +266,6 @@ let g:tagbar_type_python = {
 Plugin 'davidhalter/jedi-vim'
 let g:jedi#goto_assignments_command = ""  " release <c-g>
 let g:jedi#goto_stubs_command = ""  " release <c-s>
-let g:jedi#use_tag_stack = 1  " <c-t> to go back to usages
 let g:jedi#popup_on_dot = 0  " disable in favour of coc
 
 " install coc-jedi for coc.nvim autocompletion support
