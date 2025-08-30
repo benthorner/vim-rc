@@ -17,7 +17,6 @@ set shiftwidth=2                 " new line indent spaces
 set expandtab                    " convert tabs -> spaces
 set hlsearch                     " highlight all matches
 set cursorline                   " highlight current line
-set re=1                         " fast syntax highlight
 set mouse=n                      " enable mouse clicks
 set incsearch                    " incremental search
 set mmp=5000                     " https://github.com/vim/vim/issues/2049
