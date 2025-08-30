@@ -237,6 +237,15 @@ let g:localvimrc_sandbox = 0
 let g:localvimrc_persistent = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
+""" ale
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Plugin 'dense-analysis/ale'
+let g:ale_linters_explicit = 1  " must specify linters
+let g:ale_lint_on_text_changed = 'never'  " only on save
+let g:ale_fix_on_save = 1
+let g:ale_virtualtext_cursor = 'disabled'  " hint comments
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """ PYTHON
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -265,12 +274,6 @@ let g:jedi#popup_on_dot = 0  " disable in favour of coc
 " {
 "   "jedi.completion.disableSnippets": true
 " }
-
-Plugin 'dense-analysis/ale'
-let g:ale_linters_explicit = 1  " must specify linters
-let g:ale_lint_on_text_changed = 'never'  " only on save
-let g:ale_fix_on_save = 1
-let g:ale_virtualtext_cursor = 'disabled'  " hint comments
 
 Plugin 'ranelpadon/python-copy-reference.vim'
 nnoremap <leader>e :PythonCopyReferencePytest<CR>
