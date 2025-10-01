@@ -27,16 +27,16 @@ set scrolloff=10                 " scroll boundary margin
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader = " "
 
-" copy current file path to clipbaord (e.g. to run a test)
+" Copy current file path to clipbaord (e.g. to run a test)
 noremap <leader>p :let @+ = expand("%")<cr>
 "
-" quickly prune individual buffers (outside of bufexplorer)
+" Quickly prune individual buffers (outside of bufexplorer)
 noremap <leader><bs> :bd<cr>
 
-" faster saves (and avoids :W typos, which is used by fzf)
+" Faster saves (and avoids :W typos, which is used by fzf)
 noremap <leader>s :w<cr>
 
-" make it easy to switch back to the previously used buffer
+" Make it easy to switch back to the previously used buffer
 noremap <leader><leader> :e#<cr>
 
 " Make editing commands more intuitive (like in term)
@@ -44,6 +44,9 @@ cnoremap <c-a> <home>
 
 " Avoid overwriting paste buffer with previous content
 xnoremap <silent> p p:let @+=@0<CR>
+
+" Browse changed files - create quicklist of merge conflicts.
+noremap ,fs :GFiles?<CR>
 "
 " Make it easy to move single lines to the start of a file.
 "
