@@ -226,6 +226,21 @@ hi CocMenuSel ctermfg=13 ctermbg=235
 hi CocSearch ctermfg=39
 hi CocFloating ctermfg=33 ctermbg=234
 
+" Use tagstack to return after going to definitions.
+function! s:gotoDefinition() abort
+  let pos = getcurpos()
+  let pos[0] = bufnr()  " getcurpos always set bufnum to 0
+
+  let curidx = gettagstack()['curidx']
+  let item = {'tagname': expand('<cWORD>'), 'from': pos}
+
+  if CocAction('jumpDefinition')
+    call settagstack(winnr(), {'curidx': curidx, 'items': [item]}, 't')
+  endif
+endfunction
+
+noremap <leader>d :call <SID>gotoDefinition()<CR>
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """ ultisnips
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
