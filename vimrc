@@ -241,6 +241,9 @@ endfunction
 
 noremap <leader>d :call <SID>gotoDefinition()<CR>
 
+" Make it easy to rename variables in the current file.
+noremap <leader>r <Plug>(coc-rename)
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """ ultisnips
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
