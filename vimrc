@@ -284,12 +284,6 @@ let g:tagbar_type_python = {
     \ ],
 \ }
 
-" install coc-jedi for coc.nvim autocompletion support
-"
-" {
-"   "jedi.completion.disableSnippets": true
-" }
-
 Plugin 'ranelpadon/python-copy-reference.vim'
 nnoremap <leader>e :PythonCopyReferencePytest<CR>
 nnoremap ,ed :PythonCopyReferenceDotted<CR>
